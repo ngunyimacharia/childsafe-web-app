@@ -94,43 +94,12 @@ class ChildLogController extends Controller
   * @param  \App\ChildLog  $childLog
   * @return \Illuminate\Http\Response
   */
-  public function show(ChildLog $childLog)
+  public function stats()
   {
-    //
-  }
+    $logs = ChildLog::orderBy('created_at','desc')->get();
+    $rejected = ChildLog::where('moderation_status','rejected')->orderBy('created_at','desc')->get();
+    return view('home', ['logs'=>$logs,'rejected' => $rejected]);
 
-  /**
-  * Show the form for editing the specified resource.
-  *
-  * @param  \App\ChildLog  $childLog
-  * @return \Illuminate\Http\Response
-  */
-  public function edit(ChildLog $childLog)
-  {
-    //
-  }
-
-  /**
-  * Update the specified resource in storage.
-  *
-  * @param  \Illuminate\Http\Request  $request
-  * @param  \App\ChildLog  $childLog
-  * @return \Illuminate\Http\Response
-  */
-  public function update(Request $request, ChildLog $childLog)
-  {
-    //
-  }
-
-  /**
-  * Remove the specified resource from storage.
-  *
-  * @param  \App\ChildLog  $childLog
-  * @return \Illuminate\Http\Response
-  */
-  public function destroy(ChildLog $childLog)
-  {
-    //
   }
 
   protected function sendNotification($message) {
