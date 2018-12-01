@@ -22,13 +22,13 @@ class ChildLogController extends Controller
   }
 
   /**
-  * Show the form for creating a new resource.
+  * Function to show blocked resources
   *
   * @return \Illuminate\Http\Response
   */
-  public function create()
+  public function blocked()
   {
-    //
+    return ChildLog::where('moderation_status','rejected')->get();
   }
 
   /**

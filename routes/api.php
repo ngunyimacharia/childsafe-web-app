@@ -18,4 +18,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('/child_log', 'ChildLogController@index');
+Route::get('/child_log/blocked', 'ChildLogController@blocked');
 Route::post('/child_log', 'ChildLogController@store');
