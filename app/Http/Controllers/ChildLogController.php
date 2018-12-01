@@ -18,7 +18,7 @@ class ChildLogController extends Controller
   */
   public function index()
   {
-    $logs = ChildLog::all();
+    return ChildLog::all();
   }
 
   /**

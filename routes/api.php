@@ -17,4 +17,5 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+Route::get('/child_log', 'ChildLogController@index');
 Route::post('/child_log', 'ChildLogController@store');
