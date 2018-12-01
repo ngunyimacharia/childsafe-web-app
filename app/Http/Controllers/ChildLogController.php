@@ -28,7 +28,7 @@ class ChildLogController extends Controller
   */
   public function blocked()
   {
-    return ChildLog::where('moderation_status','rejected')->get();
+    return ChildLog::where('moderation_status','rejected')->orderBy('id','desc')->get();
   }
 
   /**
