@@ -1,4 +1,8 @@
 <?php
+header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+header('Content-Type →text/html; charset=UTF-8 ; multipart/form-data; boundary=something');
 
 /**
  * Laravel - A PHP Framework For Web Artisans
